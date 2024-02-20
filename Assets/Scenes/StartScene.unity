@@ -459,6 +459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1035274412}
+  - component: {fileID: 1035274413}
   m_Layer: 0
   m_Name: Back_Cloud
   m_TagString: Untagged
@@ -484,6 +485,22 @@ Transform:
   m_Father: {fileID: 168286230}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1035274413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035274411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d3a4b5c81a881449e249eef312972d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1211357098}
+  scrollAmount: 40
+  moveSpeed: 5
+  moveDirection: {x: -1, y: 0, z: 0}
 --- !u!1 &1211357097
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1211357098}
+  - component: {fileID: 1211357099}
   m_Layer: 0
   m_Name: Front_Cloud
   m_TagString: Untagged
@@ -518,6 +536,22 @@ Transform:
   m_Father: {fileID: 168286230}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1211357099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211357097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d3a4b5c81a881449e249eef312972d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1035274412}
+  scrollAmount: 40
+  moveSpeed: 5
+  moveDirection: {x: -1, y: 0, z: 0}
 --- !u!1 &1226633052
 GameObject:
   m_ObjectHideFlags: 0
