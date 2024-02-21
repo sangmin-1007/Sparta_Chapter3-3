@@ -22,7 +22,7 @@ public class PlayerController : InputController
     public void OnLook(InputValue value)
     {
         Vector2 newAim = value.Get<Vector2>();
-        Vector2 worldPos = _camera.WorldToScreenPoint(newAim);
+        Vector2 worldPos = _camera.ScreenToWorldPoint(newAim);
 
         newAim = (worldPos - (Vector2)transform.position).normalized;
 

@@ -17,6 +17,7 @@ public class InputController : MonoBehaviour
 
     public void CallLookEvent(Vector2 dir)
     {
+        Debug.Log(dir);
         if(dir.x <= 0)
         {
             _spriteRenderer.flipX = true;
