@@ -5,14 +5,11 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    
+    [Header("бс Option")]
     [SerializeField] private float _moveSpeed;
 
     private Camera _camera;
-
     private Transform _targetPos;
-
-
 
     private void Awake()
     {

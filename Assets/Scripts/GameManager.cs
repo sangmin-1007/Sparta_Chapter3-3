@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     private static GameManager Instance;
     public static GameManager instance => Instance;
 
-    public GameObject playerPrefab;
+    [HideInInspector]public GameObject playerPrefab;
 
     private List<Vector3> randomSpawnPoint = new List<Vector3>();
     private void Awake()

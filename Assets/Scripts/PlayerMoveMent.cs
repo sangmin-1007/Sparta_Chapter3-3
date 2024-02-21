@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMoveMent : MonoBehaviour
 {
+    [Header("бс Option")]
     [SerializeField] private float moveSpeed;
 
     private InputController _controller;
