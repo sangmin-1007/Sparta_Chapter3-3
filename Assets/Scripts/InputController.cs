@@ -9,15 +9,16 @@ public class InputController : MonoBehaviour
     public event Action<Vector2> OnLookEvent;
 
     protected SpriteRenderer _spriteRenderer;
+    protected Animator _animator;
 
     public void CallMoveEvent(Vector2 dir)
     {
+        Debug.Log(dir);
         OnMoveEvent?.Invoke(dir);
     }
 
     public void CallLookEvent(Vector2 dir)
     {
-        Debug.Log(dir);
         if(dir.x <= 0)
         {
             _spriteRenderer.flipX = true;

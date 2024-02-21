@@ -11,11 +11,21 @@ public class PlayerController : InputController
     {
         _camera = Camera.main;
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     public void OnMove(InputValue value)
     {
         Vector2 moveInput = value.Get<Vector2>().normalized;
+        if(moveInput !=  Vector2.zero)
+        {
+            _animator.SetBool("Walk", true);
+        }
+        else
+        {
+            _animator.SetBool("Walk",false);
+        }
+
         CallMoveEvent(moveInput);
     }
 

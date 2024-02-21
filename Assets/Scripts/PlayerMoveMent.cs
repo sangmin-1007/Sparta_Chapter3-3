@@ -15,6 +15,7 @@ public class PlayerMoveMent : MonoBehaviour
     {
         _controller = GetComponent<InputController>();
         _rb = GetComponentInChildren<Rigidbody2D>();
+
     }
 
     private void Start()
@@ -37,5 +38,6 @@ public class PlayerMoveMent : MonoBehaviour
         dir = dir * moveSpeed;
 
         _rb.velocity = dir;
+        
     }
 }
