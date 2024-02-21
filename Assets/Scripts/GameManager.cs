@@ -27,8 +27,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        
-        SceneManager.sceneLoaded += OnLoadedSceneEvent;
+        //SceneManager.sceneLoaded += OnLoadedSceneEvent;
     }
 
     private void InstantiatePlayer()
@@ -51,10 +50,9 @@ public class GameManager : MonoBehaviour
         randomSpawnPoint.Add(new Vector3(34f,-10f,0f));
     }
 
-    public void OnLoadedSceneEvent(Scene scene, LoadSceneMode mode)
+    public void AsyncOperationCompletedEvent(AsyncOperation op)
     {
         InstantiatePlayer();
-        SceneManager.sceneLoaded -= OnLoadedSceneEvent;
     }
 
 }

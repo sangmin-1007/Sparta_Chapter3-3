@@ -54,6 +54,9 @@ public class LoadingSceneController : MonoBehaviour
                 loadingBar.fillAmount = Mathf.Lerp(0.9f, 1f, timer * 0.5f);
                 if (loadingBar.fillAmount >= 1f)
                 {
+                    if (nextScene == "GameScene")
+                        op.completed += GameManager.instance.AsyncOperationCompletedEvent;
+
                     op.allowSceneActivation = true;
                     yield break;
                 }
