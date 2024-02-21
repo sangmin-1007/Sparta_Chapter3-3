@@ -71,6 +71,11 @@ public class AudioManager : MonoBehaviour
     {
         OnLoadGameScene("GameSceneBgm");
         OnLoadStartScene("StartSceneBgm");
+
+        if(SceneManager.GetActiveScene().name == "GameScene")
+        {
+            SceneManager.sceneLoaded -= OnLoadedSceneEvent;
+        }
     }
 
 }

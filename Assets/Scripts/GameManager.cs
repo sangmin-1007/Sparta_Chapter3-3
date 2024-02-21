@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
     public void OnLoadedSceneEvent(Scene scene, LoadSceneMode mode)
     {
         InstantiatePlayer();
+        SceneManager.sceneLoaded -= OnLoadedSceneEvent;
     }
 
 }
