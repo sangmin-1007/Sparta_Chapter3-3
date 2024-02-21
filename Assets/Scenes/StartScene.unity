@@ -606,7 +606,7 @@ MonoBehaviour:
     m_values:
     - {fileID: 8300000, guid: 58380d1fec71a5b4ba472fa6751402f3, type: 3}
     - {fileID: 8300000, guid: 3fb84937c0f5ff8498ed9cfe6f9fad3b, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 873995127}
 --- !u!82 &873995127
 AudioSource:
   m_ObjectHideFlags: 0
