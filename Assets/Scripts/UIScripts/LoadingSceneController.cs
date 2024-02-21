@@ -18,7 +18,7 @@ public class LoadingSceneController : MonoBehaviour
     public static void LoadScene(string sceneName)
     {
         nextScene = sceneName;
-        SceneManager.LoadScene("LoadingScene");
+        SceneManager.LoadScene("LoadScene");
     }
     // Start is called before the first frame update
     void Start()
