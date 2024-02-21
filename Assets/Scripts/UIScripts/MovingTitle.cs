@@ -25,7 +25,8 @@ public class MovingTitle : MonoBehaviour
         {
             if(Input.anyKeyDown)
             {
-                Debug.Log("씬 전환 시작");
+                time = 0f;
+                LoadingSceneController.LoadScene("GameScene");
             }
         }
     }
