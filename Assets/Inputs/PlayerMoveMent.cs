@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMoveMent : MonoBehaviour
 {
+    [SerializeField] private float moveSpeed;
+
     private InputController _controller;
 
     private Vector2 _moveDir = Vector2.zero;
@@ -32,7 +34,7 @@ public class PlayerMoveMent : MonoBehaviour
 
     private void ApplyMovement(Vector2 dir)
     {
-        dir = dir * 5;
+        dir = dir * moveSpeed;
 
         _rb.velocity = dir;
     }
