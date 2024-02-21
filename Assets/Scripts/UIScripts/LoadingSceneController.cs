@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,16 +17,18 @@ public class LoadingSceneController : MonoBehaviour
     [Header("бс Text")]
     [SerializeField] private string[] tip;
     [SerializeField] private TextMeshProUGUI tipText;
+
     public static void LoadScene(string sceneName)
     {
         nextScene = sceneName;
+        AudioManager.instance.StopBgm();
         SceneManager.LoadScene("LoadScene");
     }
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(LoadSceneProcess());
-        int randomIndex = Random.Range(0, tip.Length);
+        int randomIndex = UnityEngine.Random.Range(0, tip.Length);
         tipText.text = tip[randomIndex];
     }
 
