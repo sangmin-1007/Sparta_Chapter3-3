@@ -5,18 +5,25 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private Transform _targetPos;
+    
     [SerializeField] private float _moveSpeed;
 
     private Camera _camera;
-    // Start is called before the first frame update
+
+    private Transform _targetPos;
+
+
 
     private void Awake()
     {
         _camera = Camera.main;
     }
 
-    // Update is called once per frame
+    private void Start()
+    {
+        _targetPos = GameManager.instance.playerPrefab.transform;
+    }
+
     void Update()
     {
         Vector3 playerPos = new Vector3(_targetPos.position.x, _targetPos.position.y, _camera.transform.position.z);
